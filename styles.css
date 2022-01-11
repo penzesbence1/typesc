@@ -1,0 +1,102 @@
+body {
+  background-color: rgb(111, 111, 111);
+  background-size: cover;
+  background-image: url("TypeScriptBack.jpg");
+}
+
+p {
+  margin: 5px;
+  text-indent: 20px;
+}
+
+#content {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  width: 80%;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: black;
+  
+}
+
+#picture {
+  float: right;
+  height: 257px;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-style: italic;
+}
+
+li {
+  margin-left: 15px;
+  list-style-type: square;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+}
+
+span{
+  color: #087AC8;
+  font-weight: bold;
+}
+
+#muvelet{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.8rem;
+ text-align: center;
+}
+
+p{
+  text-align: justify;
+  text-indent: 0;
+  line-height: 120%;
+}
+
+
+td{
+  border: 1px solid gray;
+  padding: 5px;
+  text-align: center;
+}
+
+th{
+  color: white;
+  background-color: #087AC8;
+  text-align: center;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #087AC8;
+}
+
+#gomb{
+  margin: 10px;
+  text-align: center;
+  
+}
+input{
+  border-radius: 10px;
+  width: 40%;
+}
+
+
+.col-md-6{
+  border: 1px solid #087AC8;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10;
+  max-width: 500px;
+}
+
