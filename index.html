@@ -102,21 +102,21 @@
         <div class="col-md-6">
           <img class=img-fluid src="test1.jpg" alt="">
           
-          <div>
+          
             
             <input type="radio" name="0" value="A"/>
-            true
+            <label for="A" id="0textA">true</label>
             <br>
             <input type="radio" name="0" value="B"/>
-            <span id ="text0">true</span>
+            <label for="B" id="0textB" >false</label>
             <br>
             <input type="radio" name="0" value="C"/>
-            Compiler error
+            <label for="C" id="0textC" >Compiler error</label>
             <br>
             <input type="radio" name="0" value="D"/>
-            None of the above
-            
-        </div>
+            <label for="D" id="0textD">None of the above</label>
+           
+        
         <input type="button" onclick="valasz(0);" value="Verify" class="btn-primary">
 
 
@@ -129,16 +129,16 @@
           <div>
             
             <input type="radio" name="1" value="A"/>
-            PIZZA=5
+            <label for="A" id="1textA">PIZZA=5</label>
             <br>
             <input type="radio" name="1" value="B"/>
-            PIZZA=6
+            <label for="A" id="1textB">PIZZA=6</label>
             <br>
             <input type="radio" name="1" value="C"/>
-            BURGER=5
+            <label for="A" id="1textC">BURGER=5</label>
             <br>
             <input type="radio" name="1" value="D"/>
-            BURGER=6
+            <label for="A" id="1textD">BURGER=6</label>
             
             </div>
             <input type="button" onclick="valasz(1);" value="Verify" class="btn-primary">
@@ -153,16 +153,16 @@
           <div>
             
             <input type="radio" name="2" value="A"/>
-            (==, !=) higher priority
+            <label for="A" id="2textA">(==, !=) higher priority</label>
             <br>
             <input type="radio" name="2" value="B"/>
-            (==, !=) lower priority
+            <label for="A" id="2textB">(==, !=) lower priority</label>
             <br>
             <input type="radio" name="2" value="C"/>
-            equal priority
+            <label for="A" id="2textC">equal priority</label>
             <br>
             <input type="radio" name="2" value="D"/>
-            None of the above
+            <label for="A" id="2textD">None of the above</label>
             
         </div>
         <input type="button"onclick="valasz(2);"value="Verify" class="btn-primary">
@@ -172,17 +172,17 @@
 
           <div>
             
-            <input type="radio" name="3" />
-            6
+            <input type="radio" name="3" value="A"/>
+            <label for="A" id="3textA">6</label>
             <br>
-            <input type="radio" name="3" />
-            7
+            <input type="radio" name="3" value="B"/>
+            <label for="A" id="3textB">7</label>
             <br>
-            <input type="radio" name="3" />
-            8
+            <input type="radio" name="3" value="C"/>
+            <label for="A" id="3textC">8</label>
             <br>
-            <input type="radio" name="3" />
-            Compiler error
+            <input type="radio" name="3" value="D"/>
+            <label for="A" id="3textD">Compiler error</label>
             
         </div>
         <input type="button" onclick="valasz(3);" value="Verify" class="btn-primary">
@@ -224,23 +224,26 @@
 	{test:'test3',answer:'B'},
 	{test:'test4', answer:'B'}
 ]
-console.log(answers[test].answer);
+
 let tomb= document.getElementsByName(test);
+
 let check ="";
+let szoveg = "";
+
 for( let obj of tomb){
+
   if(obj.checked==true){
     check = obj.value;
-    if(check == answers[test].answer){
-    text0.style.color="green";
+    szoveg = test+"text"+check;
+    console.log(check, szoveg);
+    if(check==answers[test].answer){
+      document.getElementById(szoveg).style.color = "green";
+    }else{
+      document.getElementById(szoveg).style.color = "red";
+    }
+  }}
+
   
-}else{
-  text0.style.color="red";
-}
-  }
-}
-
-
-      
       
      }
   </script>
